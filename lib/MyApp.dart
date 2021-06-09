@@ -1,5 +1,4 @@
-
-
+import 'package:atm_consultoria/Rodape.dart';
 import 'package:flutter/material.dart';
 
 import 'BodyConsultoria.dart';
@@ -10,6 +9,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBarConsultoria(), body: BodyConsultoria(),bottomNavigationBar: ,);
+    return Scaffold(
+      appBar: AppBarConsultoria(),
+      body: BodyConsultoria(),
+      bottomNavigationBar: Rodape(),
+    );
   }
 }
