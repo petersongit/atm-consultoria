@@ -1,4 +1,9 @@
+import 'package:atm_consultoria/TelaContato.dart';
+import 'package:atm_consultoria/TelaEmpresa.dart';
+import 'package:atm_consultoria/TelaServico.dart';
 import 'package:flutter/material.dart';
+
+import 'TelaCliente.dart';
 
 class BodyConsultoria extends StatefulWidget {
   const BodyConsultoria({Key key}) : super(key: key);
@@ -32,7 +37,7 @@ class _BodyConsultoriaState extends State<BodyConsultoria> {
               Padding(
                 padding: EdgeInsets.all(20),
                 child: GestureDetector(
-                  onTap: _abrirEmpresa,
+                  onTap: _abrirServico,
                   child: Image.asset('images/menu_servico.png'),
                 ),
               ),
@@ -44,14 +49,14 @@ class _BodyConsultoriaState extends State<BodyConsultoria> {
               Padding(
                 padding: EdgeInsets.all(20),
                 child: GestureDetector(
-                  onTap: _abrirEmpresa,
+                  onTap: _abrirCliente,
                   child: Image.asset('images/menu_cliente.png'),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: GestureDetector(
-                  onTap: _abrirEmpresa,
+                  onTap: _abrirContato,
                   child: Image.asset('images/menu_contato.png'),
                 ),
               ),
@@ -62,11 +67,31 @@ class _BodyConsultoriaState extends State<BodyConsultoria> {
     );
   }
 
-  void _abrirEmpresa() {}
+  void _abrirEmpresa() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TelaEmpresa()),
+    );
+  }
 
-  void _abrirServico() {}
+  void _abrirServico() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TelaServico()),
+    );
+  }
 
-  void _abrirClientes() {}
+  void _abrirCliente() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TelaCliente()),
+    );
+  }
 
-  void _abrirContato() {}
+  void _abrirContato() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TelaContato()),
+    );
+  }
 }
